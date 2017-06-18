@@ -12,9 +12,14 @@ export class Data {
     return this.storage.get('todos');
   }
 
-  save(data) {
+  save(key, data) {
     let newData = JSON.stringify(data);
-    this.storage.set('todos', newData);
+    this.storage.set(key, newData);
+  }
+
+  remove(key){
+    console.log(key);
+    this.storage.remove(key);
   }
 
 }

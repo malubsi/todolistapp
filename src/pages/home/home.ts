@@ -12,47 +12,48 @@ export class HomePage {
 
   public items = [];
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController, public dataService: Data) {
-
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController,
+    public dataService: Data) {
     this.dataService.getData().then((todos) => {
-
       if (todos) {
         this.items = JSON.parse(todos);
       }
-
     });
-
   }
 
-  ionViewDidLoad() {
-
-  }
+  ionViewDidLoad() { }
 
   addItem() {
-
     let addModal = this.modalCtrl.create(AddItemPage);
-
     addModal.onDidDismiss((item) => {
-
       if (item) {
         this.saveItem(item);
       }
-
     });
 
     addModal.present();
-
   }
 
   saveItem(item) {
     this.items.push(item);
-    this.dataService.save(this.items);
+    this.dataService.save(item.title, item);
+    console.log(item);
+    console.log(item.title);
   }
 
   viewItem(item) {
     this.navCtrl.push(ItemDetailPage, {
       item: item
     });
+  }
+
+  removeItem(item) {
+    console.log(item);
+    this.dataService.remove(item.title);
+  }
+
+  refresh() {
+
   }
 
 }
