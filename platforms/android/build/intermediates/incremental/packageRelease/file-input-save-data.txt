@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jun 18 18:37:14 BRT 2017
+#Sun Jun 18 23:59:36 BRT 2017
 5.base=/home/malu/Documents/BSI8/github/todolistapp/platforms/android/build/intermediates/assets/release
 42.base=/home/malu/Documents/BSI8/github/todolistapp/platforms/android/build/intermediates/assets/release
 32.set=ASSET
