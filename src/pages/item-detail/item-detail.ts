@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavParams } from 'ionic-angular';
+import { NavParams, ViewController } from 'ionic-angular';
+import { Data } from '../../providers/data';
 
 @Component({
     selector: 'page-item-detail',
@@ -10,9 +11,8 @@ export class ItemDetailPage {
     title;
     description;
 
-    constructor(public navParams: NavParams) {
-
-    }
+    constructor(public navParams: NavParams, 
+    private dataService: Data, public view: ViewController) {}
 
     ionViewDidLoad() {
         this.title = this.navParams.get('item').title;

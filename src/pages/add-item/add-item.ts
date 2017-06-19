@@ -15,14 +15,11 @@ export class AddItemPage {
   }
  
   saveItem(){
- 
     let newItem = {
       title: this.title,
       description: this.description
     };
- 
     this.view.dismiss(newItem);
- 
   }
  
   close(){
