@@ -35224,7 +35224,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["G" /* Version */]
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_alert_alert__ = __webpack_require__(53);
 /* unused harmony reexport Alert */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_alert_alert_controller__ = __webpack_require__(111);
-/* unused harmony reexport AlertController */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_6__components_alert_alert_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_alert_alert_component__ = __webpack_require__(52);
 /* unused harmony reexport AlertCmp */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_app_app__ = __webpack_require__(6);
@@ -35318,7 +35318,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["G" /* Version */]
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_modal_modal_component__ = __webpack_require__(65);
 /* unused harmony reexport ModalCmp */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_modal_modal_controller__ = __webpack_require__(140);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_53__components_modal_modal_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_53__components_modal_modal_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_nav_nav__ = __webpack_require__(68);
 /* unused harmony reexport Nav */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_nav_nav_pop__ = __webpack_require__(66);
@@ -35433,7 +35433,7 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["G" /* Version */]
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_108__platform_dom_controller__ = __webpack_require__(8);
 /* unused harmony reexport DomController */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_109__platform_platform__ = __webpack_require__(3);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_109__platform_platform__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_109__platform_platform__["a"]; });
 /* unused harmony reexport setupPlatform */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_110__tap_click_haptic__ = __webpack_require__(36);
 /* unused harmony reexport Haptic */
@@ -45226,22 +45226,17 @@ var Data = (function () {
     Data.prototype.getData = function () {
         return this.storage.get('todos');
     };
-    Data.prototype.save = function (key, data) {
+    Data.prototype.save = function (data) {
         var newData = JSON.stringify(data);
-        this.storage.set(key, newData);
-    };
-    Data.prototype.remove = function (key) {
-        console.log(key);
-        this.storage.remove(key);
+        this.storage.set('todos', newData);
     };
     return Data;
 }());
 Data = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["l" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__ionic_storage__["b" /* Storage */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__ionic_storage__["b" /* Storage */]])
 ], Data);
 
-var _a;
 //# sourceMappingURL=data.js.map
 
 /***/ }),
@@ -55886,7 +55881,7 @@ var AboutPage = (function () {
 }());
 AboutPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-        selector: 'page-about',template:/*ion-inline-start:"/home/malu/Documents/BSI8/github/todolistapp/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar color="tertiary">\n    <ion-title>\n      Sobre os desenvolvedores\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-grid text-center>\n    <ion-row>\n      <ion-col col-12>\n        <ion-avatar>\n          <img src="https://scontent.fvix1-1.fna.fbcdn.net/v/t1.0-9/12004676_1642885492594970_9014910168652813098_n.jpg?oh=b74534c55b5b7a7a2e2c05270479d9a5&oe=59E04527">\n        </ion-avatar>\n        <h3>Adler Neves</h3>\n        <p>\n          Desenvolvedor Full Stack\n        </p>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-12>\n        <ion-avatar>\n          <img src="https://scontent.fvix1-1.fna.fbcdn.net/v/t1.0-9/13495088_10205237550493224_82911582674765726_n.jpg?oh=a7dc571e327aab6e0f22a5d9b80ea0ef&oe=599F2DC8">\n        </ion-avatar>\n        <h3>Maria Luiza Silva</h3>\n        <p>\n          Designer e Gestão\n        </p>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-12>\n        <ion-avatar>\n          <img src="https://scontent.fvix1-1.fna.fbcdn.net/v/t1.0-9/11330011_875237465874266_5513519964241974411_n.jpg?oh=8c5457497a4944fd9e5e2bc5b6aa67e1&oe=59D9314F">\n        </ion-avatar>\n        <h3>Rodrigo Lampier</h3>\n        <p>\n          Análise e Documentação\n        </p>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-12>\n        <ion-avatar>\n          <img src="https://scontent.fvix1-1.fna.fbcdn.net/v/t1.0-9/17629791_1301538069928708_7559986009214140011_n.jpg?oh=f26813085f4ee6fc9aa7c591cf7d8f56&oe=59CA8FC8">\n        </ion-avatar>\n        <h3>Yago Souza</h3>\n        <p>\n          Desenvolvedor Full Stack\n        </p>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-12>\n        <ion-avatar>\n          <img src="http://www.aha.io/assets/github.7433692cabbfa132f34adb034e7909fa.png">\n        </ion-avatar>\n        <h3>Link do Projeto</h3>\n        <a href="https://github.com/malubsi/todolistapp">Acesse aqui</a>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/home/malu/Documents/BSI8/github/todolistapp/src/pages/about/about.html"*/
+        selector: 'page-about',template:/*ion-inline-start:"/home/malu/Documents/BSI8/github/todolistapp/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar color="secondary">\n    <ion-title>\n      Informações sobre o Projeto\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-grid text-center>\n    <ion-row>\n      <ion-col col-12>\n        <ion-avatar>\n          <img class="dev-picture" src="https://scontent.fvix1-1.fna.fbcdn.net/v/t1.0-9/12004676_1642885492594970_9014910168652813098_n.jpg?oh=b74534c55b5b7a7a2e2c05270479d9a5&oe=59E04527">\n        </ion-avatar>\n        <h3>Adler Neves</h3>\n        <p>\n          Desenvolvedor Full Stack\n        </p>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-12>\n        <ion-avatar>\n          <img class="dev-picture" src="https://scontent.fvix1-1.fna.fbcdn.net/v/t1.0-9/13495088_10205237550493224_82911582674765726_n.jpg?oh=a7dc571e327aab6e0f22a5d9b80ea0ef&oe=599F2DC8">\n        </ion-avatar>\n        <h3>Maria Luiza Silva</h3>\n        <p>\n          Designer e Gestão\n        </p>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-12>\n        <ion-avatar>\n          <img class="dev-picture" src="https://scontent.fvix1-1.fna.fbcdn.net/v/t1.0-9/11330011_875237465874266_5513519964241974411_n.jpg?oh=8c5457497a4944fd9e5e2bc5b6aa67e1&oe=59D9314F">\n        </ion-avatar>\n        <h3>Rodrigo Lampier</h3>\n        <p>\n          Análise e Documentação\n        </p>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-12>\n        <ion-avatar>\n          <img class="dev-picture" src="https://scontent.fvix1-1.fna.fbcdn.net/v/t1.0-9/17629791_1301538069928708_7559986009214140011_n.jpg?oh=f26813085f4ee6fc9aa7c591cf7d8f56&oe=59CA8FC8">\n        </ion-avatar>\n        <h3>Yago Souza</h3>\n        <p>\n          Desenvolvedor Full Stack\n        </p>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-12>\n        <ion-avatar>\n          <img src="http://www.aha.io/assets/github.7433692cabbfa132f34adb034e7909fa.png">\n        </ion-avatar>\n        <h3>Link do Projeto</h3>\n        <a href="https://github.com/malubsi/todolistapp">Acesse aqui</a>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/home/malu/Documents/BSI8/github/todolistapp/src/pages/about/about.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], AboutPage);
@@ -55964,17 +55959,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var HomePage = (function () {
-    function HomePage(navCtrl, modalCtrl, dataService) {
-        var _this = this;
+    function HomePage(alertCtrl, navCtrl, modalCtrl, dataService) {
+        this.alertCtrl = alertCtrl;
         this.navCtrl = navCtrl;
         this.modalCtrl = modalCtrl;
         this.dataService = dataService;
         this.items = [];
-        this.dataService.getData().then(function (todos) {
-            if (todos) {
-                _this.items = JSON.parse(todos);
-            }
-        });
+        this.refresh();
     }
     HomePage.prototype.ionViewDidLoad = function () { };
     HomePage.prototype.addItem = function () {
@@ -55989,31 +55980,60 @@ var HomePage = (function () {
     };
     HomePage.prototype.saveItem = function (item) {
         this.items.push(item);
-        this.dataService.save(item.title, item);
-        console.log(item);
-        console.log(item.title);
+        this.dataService.save(this.items);
     };
     HomePage.prototype.viewItem = function (item) {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__item_detail_item_detail__["a" /* ItemDetailPage */], {
             item: item
         });
     };
-    HomePage.prototype.removeItem = function (item) {
-        console.log(item);
-        this.dataService.remove(item.title);
+    HomePage.prototype.clearPage = function () {
+        var _this = this;
+        var confirm = this.alertCtrl.create({
+            title: 'Excluir todos os itens',
+            message: 'Tem certeza que deseja excluir todos os itens?',
+            buttons: [
+                {
+                    text: 'Não',
+                    handler: function () { }
+                },
+                {
+                    text: 'Sim',
+                    handler: function () {
+                        _this.removeAll();
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
+    HomePage.prototype.removeItem = function (index) {
+        var deleted = this.items.splice(index, 1);
+        this.dataService.save(this.items);
+    };
+    HomePage.prototype.removeAll = function () {
+        var size = this.items.length;
+        this.items.splice(0, size);
+        this.dataService.save(this.items);
     };
     HomePage.prototype.refresh = function () {
+        var _this = this;
+        this.dataService.getData().then(function (todos) {
+            if (todos) {
+                _this.items = JSON.parse(todos);
+            }
+        });
     };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/home/malu/Documents/BSI8/github/todolistapp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="tertiary">\n    <ion-title>\n      Tarefas\n    </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="refresh()">\n        <ion-icon name="refresh"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item-sliding *ngFor="let item of items" (click)="viewItem(item)">\n      <ion-item>\n        {{item.title}}\n      </ion-item>\n      <ion-item-options side="right">\n        <button ion-button color="dark" (click)="removeItem(item)">\n          <ion-icon name="trash"></ion-icon>\n          Deletar\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n  <ion-fab right bottom>\n    <button ion-fab color="secondary" (click)="addItem()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n  </ion-fab>\n</ion-content>'/*ion-inline-end:"/home/malu/Documents/BSI8/github/todolistapp/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/home/malu/Documents/BSI8/github/todolistapp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="tertiary">\n    <ion-title>\n      Tarefas\n    </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="refresh()">\n        <ion-icon name="refresh"></ion-icon>\n      </button>\n      <button ion-button icon-only (click)="clearPage()">\n          <ion-icon name="trash"></ion-icon>\n        </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item-sliding *ngFor="let item of items; index as i;" (click)="viewItem(item)">\n      <ion-item>\n        {{item.title}}\n      </ion-item>\n      <ion-item-options side="right">\n        <button ion-button color="danger" (click)="removeItem(i)">\n          <ion-icon name="trash"></ion-icon>\n          Excluir\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n  <ion-fab right bottom>\n    <button ion-fab color="secondary" (click)="addItem()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n  </ion-fab>\n</ion-content>'/*ion-inline-end:"/home/malu/Documents/BSI8/github/todolistapp/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_data__["a" /* Data */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_data__["a" /* Data */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* AlertController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__providers_data__["a" /* Data */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_data__["a" /* Data */]) === "function" && _d || Object])
 ], HomePage);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -56053,10 +56073,10 @@ ItemDetailPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
         selector: 'page-item-detail',template:/*ion-inline-start:"/home/malu/Documents/BSI8/github/todolistapp/src/pages/item-detail/item-detail.html"*/'<ion-header>\n  <ion-navbar color="secondary">\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n \n<ion-content>\n  <ion-card>\n    <ion-card-content>\n      {{description}}\n    </ion-card-content>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"/home/malu/Documents/BSI8/github/todolistapp/src/pages/item-detail/item-detail.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavParams */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_data__["a" /* Data */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_data__["a" /* Data */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ViewController */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_data__["a" /* Data */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ViewController */]])
 ], ItemDetailPage);
 
-var _a, _b, _c;
 //# sourceMappingURL=item-detail.js.map
 
 /***/ }),
@@ -74776,7 +74796,7 @@ var MyApp = (function () {
 MyApp = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({template:/*ion-inline-start:"/home/malu/Documents/BSI8/github/todolistapp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/malu/Documents/BSI8/github/todolistapp/src/app/app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map

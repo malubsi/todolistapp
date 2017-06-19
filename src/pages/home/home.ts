@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalController, NavController } from 'ionic-angular';
+import { AlertController, ModalController, NavController } from 'ionic-angular';
 import { AddItemPage } from '../add-item/add-item'
 import { ItemDetailPage } from '../item-detail/item-detail';
 import { Data } from '../../providers/data';
@@ -12,13 +12,9 @@ export class HomePage {
 
   public items = [];
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController,
+  constructor(public alertCtrl: AlertController, public navCtrl: NavController, public modalCtrl: ModalController,
     public dataService: Data) {
-    this.dataService.getData().then((todos) => {
-      if (todos) {
-        this.items = JSON.parse(todos);
-      }
-    });
+      this.refresh();
   }
 
   ionViewDidLoad() { }
@@ -36,9 +32,7 @@ export class HomePage {
 
   saveItem(item) {
     this.items.push(item);
-    this.dataService.save(item.title, item);
-    console.log(item);
-    console.log(item.title);
+    this.dataService.save(this.items);
   }
 
   viewItem(item) {
@@ -47,13 +41,43 @@ export class HomePage {
     });
   }
 
-  removeItem(item) {
-    console.log(item);
-    this.dataService.remove(item.title);
+  clearPage() {
+    let confirm = this.alertCtrl.create({
+      title: 'Excluir todos os itens',
+      message: 'Tem certeza que deseja excluir todos os itens?',
+      buttons: [
+        {
+          text: 'Não',
+          handler: () => {}
+        },
+        {
+          text: 'Sim',
+          handler: () => {
+            this.removeAll();
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
+  removeItem(index) {
+      let deleted = this.items.splice(index, 1);
+      this.dataService.save(this.items);
+  }
+
+  removeAll(){
+    let size = this.items.length;
+    this.items.splice(0,size);
+    this.dataService.save(this.items);
   }
 
   refresh() {
-
+    this.dataService.getData().then((todos) => {
+      if (todos) {
+        this.items = JSON.parse(todos);
+      }
+    });
   }
 
 }

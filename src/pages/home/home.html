@@ -7,20 +7,23 @@
       <button ion-button icon-only (click)="refresh()">
         <ion-icon name="refresh"></ion-icon>
       </button>
+      <button ion-button icon-only (click)="clearPage()">
+          <ion-icon name="trash"></ion-icon>
+        </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item-sliding *ngFor="let item of items" (click)="viewItem(item)">
+    <ion-item-sliding *ngFor="let item of items; index as i;" (click)="viewItem(item)">
       <ion-item>
         {{item.title}}
       </ion-item>
       <ion-item-options side="right">
-        <button ion-button color="dark" (click)="removeItem(item)">
+        <button ion-button color="danger" (click)="removeItem(i)">
           <ion-icon name="trash"></ion-icon>
-          Deletar
+          Excluir
         </button>
       </ion-item-options>
     </ion-item-sliding>
