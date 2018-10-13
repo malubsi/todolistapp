@@ -10,4 +10,5 @@ Mais detalhes nos [slides](https://docs.google.com/presentation/d/1uWqh3wiypjZ7I
 Para visualizar a aplicação são necessários 3 passos:
 1. Git clone do repositório, ou fazer o download do mesmo;
 2. Abrir o terminal na raiz do projeto e digitar:
+3. **npm i**, para instalar as dependencias seguido de:
 3. **ionic serve**, para emular no seu navegador.
