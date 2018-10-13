@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/malu/Documents/BSI8/github/todolistapp/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="release"><source path="/home/malu/Documents/BSI8/github/todolistapp/platforms/android/CordovaLib/src/release/shaders"/></dataSet></merger>
