@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="tertiary">
+    <ion-title>
+      Tarefas
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="refresh()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="clearPage()">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of items; index as i;" (click)="viewItem(item)">
+      <ion-item>
+        {{item.title}}
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="removeItem(i)">
+          <ion-icon name="trash"></ion-icon>
+          Excluir
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="secondary" (click)="addItem()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+  </ion-fab>
+</ion-content>
